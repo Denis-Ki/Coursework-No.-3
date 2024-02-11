@@ -2,8 +2,8 @@ from functions import load_operations, filter_and_sort_operations, formatter_dat
 
 
 def main():
-    file_path = 'operations.json'  # Укажите путь к вашему файлу
-    operations = load_operations(file_path)
+    file_name = 'operations.json'  # Укажите имя файла
+    operations = load_operations(file_name)
 
     last_operations = filter_and_sort_operations(operations)
 

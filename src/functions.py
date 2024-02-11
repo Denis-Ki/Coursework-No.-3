@@ -1,11 +1,11 @@
 import json
 
 
-def load_operations(file_path):
+def load_operations(file_name):
     """
     Чтение данных из файла JSON
     """
-    with open(file_path, 'r', encoding='UTF-8') as file:
+    with open(file_name, 'r', encoding='UTF-8') as file:
         return json.load(file)
 
 
@@ -33,5 +33,3 @@ def mask_number(number):
         card_number = number.split(' ')
         card_number[-1] = ' '.join([card_number[-1][:4], (card_number[-1][4:6] + '**'), '****', card_number[-1][-4:]])
         return ' '.join(card_number)
-
-
