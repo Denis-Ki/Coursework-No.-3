@@ -15,8 +15,6 @@ def main():
     last_operations = filter_and_sort_operations(operations)
 
     for operation in last_operations:
-        '''
-        '''
 
         print(formatter_date(operation['date']), operation['description'])
 
