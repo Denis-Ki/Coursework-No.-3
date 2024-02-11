@@ -10,6 +10,10 @@ def load_operations(file_name):
 
 
 def filter_and_sort_operations(operations):
+    """
+    Фильтрация операций по ключу ['state'] == 'EXECUTED'
+    Сортировка по дате и выбор последних 5 операций
+    """
     filter_operations = []
     for oper in operations:
         if 'state' in oper and oper['state'] == 'EXECUTED':
@@ -20,13 +24,18 @@ def filter_and_sort_operations(operations):
 
 
 def formatter_date(date):
+    """
+    Преобразование даты в формате дд.мм.гггг
+    """
     date = date.split('T')
     date = date[0].split('-')
     return f'{date[2]}.{date[1]}.{date[0]}'
 
 
 def mask_number(number):
-    # Замаскировать номер карты или счета
+    """
+    Замаскировать номер карты или счета
+    """
     if 'Счет' in number:
         return 'Счет **' + number[-4:]
     else:

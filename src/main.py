@@ -2,6 +2,13 @@ from functions import load_operations, filter_and_sort_operations, formatter_dat
 
 
 def main():
+    """
+    основной функционал - для указанного JSON файла с операциями
+    выводятся  5 последних выполненных клиентом операций в формате:
+    <дата перевода> <описание перевода>
+    <откуда> -> <куда>
+    <сумма перевода> <валюта>
+    """
     file_name = 'operations.json'  # Укажите имя файла
     operations = load_operations(file_name)
 
